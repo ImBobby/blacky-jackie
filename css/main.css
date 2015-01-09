@@ -1,0 +1,198 @@
+* {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+html {
+    font: 400 16px/1.6em sans-serif;
+}
+
+.container {
+    width: 95%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.page-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    width: 100%;
+    margin: 0;
+    font: 400 8em 'Norican', cursive;
+    text-align: center;
+    letter-spacing: 10px;
+    color: #fff;
+    opacity: .2;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+}
+
+.board {
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+    background: -webkit-gradient(linear, left top, left bottom, from(#006b58), to(#01977a));
+    background: -webkit-linear-gradient(top, #006b58, #01977a);
+    background: linear-gradient(to bottom, #006b58, #01977a);
+}
+
+.board:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/bedge-grunge.png');
+    content: '';
+}
+
+.board-inner {
+    position: relative;
+    z-index: 2;
+    height: 100vh;
+}
+
+.info {
+    padding: 1em;
+    margin: 0;
+    font: 400 30px/1.6em 'Norican';
+    color: #fff;
+}
+
+.info dt,
+.info dd {
+    float: left;
+}
+
+.info dt {
+    clear: left;
+}
+
+.controls {
+    position: absolute;
+    right: 0;
+    bottom: 13em;
+    left: 0;
+    z-index: 4;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 450px;
+    margin: 0 auto;
+}
+
+.controls-item {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 auto;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+}
+
+.card {
+    position: relative;
+    width: 110px;
+    height: 150px;
+    border: solid 9px #fff;
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
+    background: #f0f0f0;
+    -webkit-box-shadow: 0 0 0 1px #666;
+            box-shadow: 0 0 0 1px #666;
+}
+
+.card + .card {
+    margin-left: 1em;
+}
+
+.card--back {
+    background: #182e67;
+    background-image: url('../img/black-thread-light.png');
+}
+
+.card--deck {
+    position: absolute;
+    right: 1.6em;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+}
+
+.card:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    -webkit-border-radius: 1px;
+            border-radius: 1px;
+    -webkit-box-shadow: 0 0 0 2px #fff, 0 0 0 5px #182e67;
+            box-shadow: 0 0 0 2px #fff, 0 0 0 5px #182e67;
+    content: '';
+}
+
+.card__number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 4em;
+    font-weight: 700;
+    color: #182e67;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+}
+
+.cards-container {
+    position: absolute;
+    left: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    height: 150px;
+}
+
+.cards-container--top {
+    top: 3em;
+}
+
+.cards-container--bottom {
+    bottom: 2em;
+}
+
+.btn {
+    display: inline-block;
+    vertical-align: middle;
+    padding: .5em 2em;
+    border: solid 1px #e0a431;
+    -webkit-border-radius: 3px;
+            border-radius: 3px;
+    text-transform: uppercase;
+    color: #fff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f3ce50), to(#f7b431));
+    background: -webkit-linear-gradient(top, #f3ce50, #f7b431);
+    background: linear-gradient(to bottom, #f3ce50, #f7b431);
+}
+
+.btn[disabled] {
+    background: -webkit-gradient(linear, left top, left bottom, from(#e8c74e), to(#e7a930));
+    background: -webkit-linear-gradient(top, #e8c74e, #e7a930);
+    background: linear-gradient(to bottom, #e8c74e, #e7a930);
+    opacity: .8;
+}

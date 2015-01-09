@@ -1,0 +1,9 @@
+{
+  "name": "package",
+  "version": "0.1.0",
+  "dependencies": {
+    "normalize-css": "~3.0.2",
+    "alertify-js": "~0.10.2",
+    "baze-modal": "~1.0.2"
+  }
+}

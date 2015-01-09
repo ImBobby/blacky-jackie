@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Blacky Jackie</title>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/alertify.min.css">
+    <link rel="stylesheet" href="css/default.css">
+    <link href='http://fonts.googleapis.com/css?family=Norican' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <h1 class="page-title">Blacky Jackie</h1>
+
+    <div class="board">
+        <div class="board-inner">
+            <dl class="info cf">
+                <dt>Dealer</dt>
+                <dd class="info-dealer">?</dd>
+
+                <dt>Player</dt>
+                <dd class="info-player">-</dd>
+            </dl>
+
+            <div class="card card--back card--deck"></div>
+
+            <div class="cards-container cards-container--top" id="dealerCards"></div>
+            <div class="cards-container cards-container--bottom" id="playerCards"></div>
+
+            <div class="controls">
+                <div class="controls-item">
+                    <button class="btn btn--primary" id="btnHit" disabled>Hit</button>
+                </div>
+                <div class="controls-item">
+                    <button class="btn btn--primary" id="btnReset">Play</button>
+                </div>
+                <div class="controls-item">
+                    <button class="btn btn--primary" id="btnStand" disabled>Stand</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <template id="cardTemplate">
+        <div class="card">
+            <span class="card__number">10</span>
+        </div>
+    </template>
+    
+    <script src="js/alertify.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
